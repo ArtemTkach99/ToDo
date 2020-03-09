@@ -92,5 +92,65 @@
                 opacity: 0;
             }
         }
+        
+    }
+
+    .tasks__items{
+        h2 {
+            opacity: 0.4;
+            text-align: center;
+        }
+    }
+
+    .tasks__form {
+        margin-top: 20px;
+
+        .tasks__form-block{
+
+        }
+
+        .field{
+            margin-bottom: 20px;
+        }
+        .button--grey {
+            margin-left: 20px;
+            color: gray;
+            background-color: rgb(243, 236, 236);
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.6;
+            }   
+        }
+    }
+
+
+    .tasks__form{
+            .tasks__form-new {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 8px 4px;
+                transition: background-color 0.15s ease-in-out;
+                opacity: 0.6;
+                
+                &:hover {
+                    opacity: 0.8;
+                }
+
+
+            span {
+                font-size: 16px;
+                margin-left: 20px;
+                display: inline;
+            }
+
+
+            img {
+                width: 16px;
+                height: 16px;
+                
+            }
+        }   
     }
 }

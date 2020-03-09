@@ -12,7 +12,7 @@ import './AddButtonList.scss';
 const AddList = ({ colors , onAdd }) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
     const [selectedColor, selectColor] = useState(3);
-    const [isLoading, setIsLoading] = useState(3);
+    const [isLoading, setIsLoading] = useState(false);
     const [inputValue, setInputValue] = useState('');
 
     useEffect(() => {
@@ -43,6 +43,9 @@ const AddList = ({ colors , onAdd }) => {
         const listObj ={...data, color: { name: color}};
         onAdd(listObj);
         onClose();
+        })
+        .catch(() => {
+            alert('Ошибка при добавление списка!');
         })
         .finally(() => {
             setIsLoading(false);  
